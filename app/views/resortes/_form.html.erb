@@ -1,0 +1,47 @@
+<%= form_with(model: resorte) do |form| %>
+  <% if resorte.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(resorte.errors.count, "error") %> prohibited this resorte from being saved:</h2>
+
+      <ul>
+        <% resorte.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :diam, style: "display: block" %>
+    <%= form.text_field :diam %>
+  </div>
+
+  <div>
+    <%= form.label :dext, style: "display: block" %>
+    <%= form.text_field :dext %>
+  </div>
+
+  <div>
+    <%= form.label :vtas, style: "display: block" %>
+    <%= form.text_field :vtas %>
+  </div>
+
+  <div>
+    <%= form.label :altura, style: "display: block" %>
+    <%= form.text_field :altura %>
+  </div>
+
+  <div>
+    <%= form.label :luz1, style: "display: block" %>
+    <%= form.text_field :luz1 %>
+  </div>
+
+  <div>
+    <%= form.label :luz2, style: "display: block" %>
+    <%= form.text_field :luz2 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
