@@ -17,4 +17,18 @@ module ResortesHelper
       h_extremo1 + inc * ( node_value*nodos_x_vta-nodos_x_vta)
     end
   end
+
+  def self.sumMatrix(bigMatrix,matrix,indexROW,indexCOL) 
+    """Suma los elementos una matriz (matrix) dentro de la matriz mayor (bigMatrix), desde unos índices iniciales (indexROW, indexCOL)."""
+    m=0   
+    for i in indexROW..(indexROW+len(matrix)) do
+      n=0
+      for j in indexCOL..(indexCOL+len(matrix)) do
+        bigMatrix[i][j] = bigMatrix[i][j]+ matrix[m][n]
+        n = n+1
+      end
+      m=m+1
+    end
+    return bigMatrix
+  end
 end

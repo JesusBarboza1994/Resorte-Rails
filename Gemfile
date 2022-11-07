@@ -64,3 +64,5 @@ group :development do
   # gem "spring"
 end
 
+gem 'matrix', '~> 0.4.2'
+gem 'pry'
